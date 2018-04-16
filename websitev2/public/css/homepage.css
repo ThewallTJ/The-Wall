@@ -1,0 +1,235 @@
+@font-face {
+  font-family: Assasin;
+  src: url(../fonts/Althea.ttf);
+}
+body {
+  font-family: Assasin;
+  background-color: #2f4159;
+  margin: 0;
+}
+h1{
+  text-align: center;
+}
+
+.header{
+  background-color: #257884;
+  overflow: hidden;
+}
+.dropbtn {
+  display: none;
+    color: white;
+    width: 6em;
+    height: 5em;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    background-color: #257884;
+    float: right;
+}
+
+.dropbtn1 {
+  
+  float:right;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  text-align: center;
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+    margin: 0;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 60em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.dropdown-content1 {
+    margin: 0;
+    margin-top: 5em;
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    min-width: 10em;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+    margin: 0;
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content1 a {
+    margin: 0;
+    color: black;
+    text-decoration: none;
+    display: block;
+}
+
+
+.menutext{
+  margin: 0;
+  display: none;
+  text-align: center;
+  background-color: #257884;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
+/* Css grid in de wrapper aanmaken */
+.wrapper{
+  margin-left: 25.9em;
+   display: inline-grid;
+   grid-column-gap: 1px;
+   grid-template-columns: 1fr 1fr 1fr;
+   background-color: #2f4159;
+}
+
+/* Een grid item maken */
+.grid-item{
+  border: 3px solid rgba(0, 0, 0, 0.8);
+  padding: 0px;
+  font-size: 30px;
+  width: 7.5em;
+  height: 5em;
+}
+
+/* banner maken */
+#upload{
+  vertical-align:middle;
+  margin-top: 1em;
+  margin-bottom: 1em;
+  height: 2.5em;
+  width: 7.5em;
+}
+#logo{
+  vertical-align:middle;
+  margin-left: 3em;
+  margin-right: 1em;
+  height: 4.5em;
+  width: 4.5em;
+}
+.h2{
+  margin-left: 4.6em;
+  font-size: 5em;
+  display:inline;
+  vertical-align:middle;
+  text-align: center;
+}
+.h2-right{
+  font-size: 2em;
+  display:inline;
+  vertical-align:middle;
+  float: right;
+}
+
+/* responsive */
+@media screen and (max-width: 1112px){
+  .wrapper{
+    margin-left: 13em;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  .h2{
+
+    margin-left: 2em;
+  }
+}
+@media screen and (max-width: 904px){
+    .wrapper{
+      margin-left: 5em;
+    }
+}
+@media screen and (max-width: 810px) {
+  .h2{
+    margin-left: 3em;
+  }
+}
+@media screen and (max-width: 884px) {
+  .h2{
+    margin-left: 1em;
+  }
+}
+@media screen and (max-width: 774px) {
+  .wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+  .h2{
+    margin-left: 0.5em;
+  }
+}
+@media screen and (max-width: 734px){
+  .wrapper{
+    margin-left: 3em;
+  }
+}
+@media screen and (max-width: 702px){
+  .wrapper{
+    margin-left: 1em;
+  }
+}
+@media screen and (max-width: 718px) {
+  body{
+    text-align: center;
+  }
+  #logo{
+    display: none;
+  }
+  #upload{
+    display: none;
+  }
+  .h2{
+    display: none;
+  }
+  .h2-right{
+    display: none;
+  }
+  .dropbtn{
+      display: inherit;
+  }
+  .menutext{
+    display: inherit;
+  }
+  .dropdown-content {
+      min-width: 60em;
+      text-align: center;
+  }
+}
+@media screen and (max-width: 670px) {
+  .wrapper{
+    grid-template-columns: 1fr 1fr;
+  }
+  .dropdown-content{
+    min-width: 326px;
+  }
+}
+@media screen and (max-width: 656px) {
+  .dropdown-content{
+    min-width: 656px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .wrapper{
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 340px){
+  .wrapper{
+    margin-left: 0;
+  }
+}

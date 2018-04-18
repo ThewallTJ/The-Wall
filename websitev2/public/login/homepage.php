@@ -1,25 +1,18 @@
 <?php
+session_start();
 
-
-// CHECKEN OF DE USERID EN DE HASH EEN MATCH ZIJN IN DE DATABASE ZITTEN
-if (!isset($_COOKIE['userid'])) {
-    header( 'Location: login.php');
+// CHECKEN OF DE GEBRUIKER VERDWAALD IS
+if (!isset($_SESSION['userid'])) {
+    if (!isset($_COOKIE['userid'])) {
+        header('Location: login.php');
+    } else {
+        require('cookiecheck.php');
+        $_SESSION['userid'] = $_COOKIE['userid'];
+        $_SESSION['hash'] = $_COOKIE['hash'];
+        $_SESSION['username'] = $_COOKIE['username'];
+    }
 }
-// CHECKEN OF DE USERID EN DE HASH EEN MATCH ZIJN IN DE DB
-require ('../../private/db.php');
-$query = "SELECT userid  FROM users WHERE userid = ?  AND hash = ?";
-$stmt = $mysqli->prepare($query) or die ('error preparing.');
-$stmt->bind_param( 'is',$userid, $hash) or die ('Error binding params.');
 
-$userid = $_COOKIE['userid'];
-$hash = $_COOKIE['hash'];
-$username = $_COOKIE['username'];
-$stmt->execute() or die ('Error executing.');
-$fetch_success = $stmt->fetch();
-
-if (!$fetch_success) {
-    header( 'Location: login.php');
-}
 
 
 
@@ -32,7 +25,7 @@ if (!$fetch_success) {
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="../css/homepage.css">
-    <title>The wall!</title>
+    <title>The wall</title>
 </head>
 <body>
 
@@ -63,18 +56,19 @@ if (!$fetch_success) {
 
 
 <div class="dropdown">
-<h2 class="h2-right dropbtn1" onclick="Dropdown1()"><?php echo $_COOKIE['username'];  ?></h2>
+<h2 class="h2-right dropbtn1" onclick="Dropdown1()"><?php echo $_SESSION['username'];  ?></h2>
   <div id="myDropdown1" class="dropdown-content1">
-    <a href="#home">sign out</a>
+    <a href="uitlogpoort.php">sign out</a>
     <a href="#about">sign in</a>
-    <a href="#contact">profile (maintenance)</a>
+    <a href="profilepage.php">profile (maintenance)</a>
   </div>
 </div>
 
 
 
 
-<h1>Pictures</h1>
+
+
 <br>
 <div class="wrapper">
     <img src="../media/6am.jpg" class="grid-item" alt="gridimage">

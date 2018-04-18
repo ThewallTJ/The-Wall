@@ -1,0 +1,107 @@
+body{
+  background-color: #2f4159;
+  margin: 0;
+}
+
+.inline {
+   float: left;
+
+}
+
+.form {
+  width: 30%;
+  height: 450px;
+  margin: 0 auto;
+  margin-top: 50px;
+  background-color: white;
+
+}
+
+form {
+  width: 100%;
+  height: 74px;
+  padding-top: 20px;
+}
+
+input[type=text],
+input[type=password],
+input[type=number],
+input[type=email]  {
+  display: block;
+  margin: 0 auto;
+  height: 30px;
+  width: 350px;
+  border: 1px solid black;
+  padding-left: 4px;
+  padding-right: 4px;
+  font-size: 20px;
+  color: #000000;
+  background-color: #eeeeee;
+}
+
+::placeholder {
+    color: lightgrey;
+}
+
+input[type=text],
+input[type=number],
+input[type=password],
+input[type=email] {
+  margin-top: 20px;
+}
+
+
+
+
+.welcome {
+  text-align: center;
+  color: darkGrey;
+}
+
+input[type=submit] {
+
+    border: none;
+    background-color: Dodgerblue;
+    color: white;
+    padding: 10px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 20px 4px;
+    cursor: pointer;
+    border-radius: 8px;
+    position: relative;
+    left: 50%;
+    margin-left: -75px;
+    width: 150px;
+
+}
+
+
+
+
+
+.logo {
+  width: 150px;
+  position: relative;
+  left: 50%;
+  margin-left: -75px;
+}
+
+.buttonHelp {
+  border: none;
+  background-color: #3aaa35;
+  color: white;
+  padding: 10px;
+  text-align: center;
+  text-decoration: none;
+  font-size: 16px;
+  margin: 20px 4px;
+  cursor: pointer;
+  border-radius: 8px;
+  width: 150px;
+  right: 0;
+  bottom: 0;
+  position: fixed;
+}

@@ -36,7 +36,7 @@ if (!isset($_SESSION['userid'])) {
 <div class="header">
         <img src="../media/logo.png" alt="logo" id="logo">
 
-        <a href="www.upload.com"><img src="../media/uploadBlauw.png" alt="upload" id="upload"></a>
+        <a href="upload.php"><img src="../media/uploadBlauw.png" alt="upload" id="upload"></a>
 
 
         

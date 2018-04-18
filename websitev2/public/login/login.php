@@ -1,7 +1,7 @@
 <?php
-// CHECKEN OF DE GEBRUIKER VERDWAALD IS
-if (isset($_COOKIE['userid'])) {
-    header( 'Location: homepage.php');
+session_start();
+if (isset($_COOKIE['userid']) OR isset($_SESSION['userid'])) {
+    header( 'Location: login.php');
 }
 
 

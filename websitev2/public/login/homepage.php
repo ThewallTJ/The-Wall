@@ -38,7 +38,8 @@ if (!isset($_SESSION['userid'])) {
  </div>
 </div>
 <div id="myDropdown" class="dropdown-content">
-  <a href="www.google.com">look this</a>
+  <a href="upload.php">Upload</a>
+  <a href="uitlogpoort.php">Log uit</a>
 </div>
 <br>
 

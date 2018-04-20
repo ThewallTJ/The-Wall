@@ -1,6 +1,6 @@
 @font-face {
   font-family: Assasin;
-  src: url(../fonts/Althea.ttf);
+  src: url(fonts/Althea.ttf);
 }
 body {
   font-family: Assasin;
@@ -27,11 +27,6 @@ h1{
     float: right;
 }
 
-.dropbtn1 {
-  
-  float:right;
-}
-
 /* The container <div> - needed to position the dropdown content */
 .dropdown {
   text-align: center;
@@ -51,17 +46,6 @@ h1{
     z-index: 1;
 }
 
-.dropdown-content1 {
-    margin: 0;
-    margin-top: 5em;
-    display: none;
-    position: absolute;
-    background-color: #f1f1f1;
-    min-width: 10em;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
-}
-
 /* Links inside the dropdown */
 .dropdown-content a {
     margin: 0;
@@ -70,15 +54,6 @@ h1{
     text-decoration: none;
     display: block;
 }
-
-.dropdown-content1 a {
-    margin: 0;
-    color: black;
-    text-decoration: none;
-    display: block;
-}
-
-
 .menutext{
   margin: 0;
   display: none;
@@ -108,6 +83,7 @@ h1{
   font-size: 30px;
   width: 7.5em;
   height: 5em;
+  cursor: pointer;
 }
 
 /* banner maken */
@@ -133,11 +109,87 @@ h1{
   text-align: center;
 }
 .h2-right{
+  margin-top: 1em;
   font-size: 2em;
   display:inline;
   vertical-align:middle;
   float: right;
 }
+.trigger img{
+  height: 4em;
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  background-color: white;
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    padding: 1px;
+}
+
+/* Caption of Modal Image */
+#caption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #ccc;
+    padding: 10px 0;
+    height: 150px;
+    font-size: 1em;
+}
+
+/* Add Animation */
+.modal-content, #caption {
+    -webkit-animation-name: zoom;
+    -webkit-animation-duration: 0.6s;
+    animation-name: zoom;
+    animation-duration: 0.6s;
+}
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+    color: #bbb;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+
 
 /* responsive */
 @media screen and (max-width: 1112px){
@@ -183,7 +235,7 @@ h1{
     margin-left: 1em;
   }
 }
-@media screen and (max-width: 718px) {
+@media screen and (max-width: 730px) {
   body{
     text-align: center;
   }

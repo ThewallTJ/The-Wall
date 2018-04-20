@@ -70,16 +70,25 @@ if (!isset($_SESSION['userid'])) {
 
 
 <br>
+    <div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+  <br>
+  <div id="caption2"></div>
+</div>
 <div class="wrapper">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
-    <img src="../media/6am.jpg" class="grid-item" alt="gridimage">
+    <?php
+  $mysqli = new mysqli('localhost','24585_user','24585_pass','24585_db') or die ('Error connecting');
+  $query = "SELECT location, title, description FROM images ORDER BY image_id DESC ";
+  $stmt = $mysqli->prepare($query) or die ('Error preparing.');
+  $stmt->bind_result($location,$title,$description) or die ('Error binding by result');
+  $stmt->execute() or die ('Error executing.');
+
+  while  ($succes = $stmt->fetch()){
+      echo '<img alt="Titel: ' . $title . "<br>" . "Description: " . $description .'" class="grid-item" src="' . $location . '" />';
+  }
+  ?>
 </div>
 
 

@@ -79,9 +79,6 @@ input[type=submit] {
 }
 
 
-
-
-
 .logo {
   width: 150px;
   position: relative;
@@ -104,4 +101,18 @@ input[type=submit] {
   right: 0;
   bottom: 0;
   position: fixed;
+}
+
+@media screen and (max-width: 1196px) {
+  input[type=text],
+  input[type=email],
+  input[type=password],
+   {
+    width: 325px;
+    height: 30px;
+  }
+}
+
+@media screen and (max-width: 11px) {
+
 }

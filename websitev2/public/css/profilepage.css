@@ -1,0 +1,27 @@
+body{
+  background-color: #2f4159;
+  margin: 0;
+}
+
+.wrapper {
+  width: 50%;
+  height: 500px;
+  margin: 0 auto;
+  margin-top: 100px;
+  background-color: white;
+}
+
+.wrapper-topleft {
+  width: 150px;
+  height: 150px;
+}
+
+strong {
+  border-right: 1px solid black;
+}
+
+h3 {
+  border: 1px solid grey;
+  width: 300px;
+  
+}

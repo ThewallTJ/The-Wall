@@ -20,3 +20,6 @@
 [12-Apr-2018 11:34:59] Hallo errors!
 [12-Apr-2018 11:48:49] Hallo errors!
 [12-Apr-2018 11:51:11] Hallo errors!
+[20-Apr-2018 12:14:25 Europe/Berlin] Hallo errors!
+[20-Apr-2018 12:14:25 Europe/Berlin] PHP Warning:  mysqli::__construct(): (HY000/1045): Access denied for user 'thomas_gebruiker'@'localhost' (using password: YES) in C:\Users\Thomas\Documents\ma\bewijzenmap\periode1.3\PROJ\thewall\websitev2\private\db.php on line 2
+[20-Apr-2018 12:14:25 Europe/Berlin] PHP Warning:  main(): Couldn't fetch mysqli in C:\Users\Thomas\Documents\ma\bewijzenmap\periode1.3\PROJ\thewall\websitev2\private\db.php on line 4

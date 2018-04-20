@@ -80,21 +80,7 @@ input[type=submit] {
   margin-top: 2em;
 }
 
-.link {
-  float: right;
-  width: 40%;
-  margin-right: 10px;
-  margin-top: -1px;
-  color: grey;
-}
 
-.link2 {
-  float: right;
-  width: 40%;
-  margin-right: 10px;
-  margin-top: -1px;
-  color: grey;
-}
 
 
 .logo {
@@ -104,11 +90,50 @@ input[type=submit] {
   margin-left: -75px;
 }
 
-.buttonHelp {
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    padding-top: 100px; /* Location of the box */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: white;
+    margin: auto;
+    padding: 15px;
+    border: 1px solid #888;
+    width: 40%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+#myBtn {
   border: none;
   background-color: #3aaa35;
   color: white;
-  padding: 10px;
+  padding: 5px;
   text-align: center;
   text-decoration: none;
   font-size: 16px;
@@ -120,3 +145,66 @@ input[type=submit] {
   bottom: 0;
   position: fixed;
 }
+
+@media screen and (max-width: 1358px) {
+  .button,
+  input[type=submit] {
+    padding: 5px;
+    width: 100px;
+  }
+
+@media screen and (max-width: 1196px) {
+  input[type=text],
+  input[type=password] {
+    width: 300px;
+  }
+
+  @media screen and (max-width: 1028px) {
+    input[type=text],
+    input[type=password] {
+      width: 275px;
+}
+
+      @media screen and (max-width: 1358px) {
+        .button,
+        input[type=submit] {
+          width: 75px;
+        }
+
+      @media screen and (max-width: 945px) {
+          input[type=text],
+          input[type=password] {
+            width: 250px;
+      }
+
+      @media screen and (max-width: 861px) {
+        input[type=text],
+        input[type=password] {
+          width: 225px;
+    }
+
+    @media screen and (max-width: 857px) {
+      .button,
+      input[type=submit] {
+        width: 50px;
+        font-size: 12px;
+      }
+
+      @media screen and (max-width: 783px) {
+          input[type=text],
+          input[type=password] {
+            width: 200px;
+      }
+
+
+      @media screen and (max-width: 702px) {
+          .form {
+            width: 350px;
+          }
+          input[type=submit] {
+            margin-left: 6em;
+          }
+          .button2 {
+            margin-right: 6em;
+          }
+      }

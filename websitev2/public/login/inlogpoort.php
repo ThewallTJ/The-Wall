@@ -1,4 +1,5 @@
 <?php
+session_start();
 
 // CHECKEN OF DE GEBRUIKER HIER WEL HOORT TE ZIJN
 if (!isset($_POST['submit_login'])) {
@@ -37,7 +38,13 @@ if (!$fetch_success) {
     exit();
 }
 
+// ALLES IN ORDE? DAN....
+// COOKIES MAKEN & SESSIONS MAKEN
+
 setcookie( 'userid', $userid, time() + 3600 * 24 * 7);
+$_SESSION['userid'] = $userid;
 setcookie( 'hash', $hash, time() + 3600 * 24 * 7);
+$_SESSION['hash'] = $hash;
 setcookie( 'username', $username, time() + 3600 * 24 * 7);
+$_SESSION['username'] = $username;
 header( 'Location: homepage.php');

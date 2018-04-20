@@ -70,8 +70,22 @@ $result = $stmt->execute() or die ('Error inserting user.');
 $to = $_POST['email'];
 $subject = 'Verificatie van je account.';
 $message = 'Heel erg bedankt voor het registreren bij TR The Wall, u bent er bijna. Alles wat u nu nog moet doen is op deze link klikken, om je account te activeren ';
-$message .= ' http://24609.hosts.ma-cloud.nl/bewijzenmap/periode1.3/PROJ/thewall/websitev2/public/register/verify.php?mailadres=' . $mailadres . '&hash=' . $hash;
+$message .= " http://24609.hosts.ma-cloud.nl/bewijzenmap/periode1.3/PROJ/thewall/websitev2/public/register/verify.php?mailadres=" . $mailadres . "&hash=" . $hash;
 $headers = 'From: 24609@ma-web.nl';
-mail($to,$subject,$message,$headers) or die ('Error mailing');
+mail($to,$subject,$message,$headers) or die ("Error mailing");
 
-echo ' Bedankt voor het registeren, check je mail inbox om uw email te verifiëren!';
+   echo "<h1>gelukt, maar nog slechts een laatste stap,check uw  mail inbox om uw account te activeren</h1>"
+
+   ?>
+
+   <!DOCTYPE html>
+   <html lang="en" dir="ltr">
+     <head>
+       <meta charset="utf-8">
+       <title>Process_registration</title>
+        <link rel="stylesheet" href="../css/process_registration.css">
+     </head>
+     <body>
+       <p> bedankt voor het registeren!</p>
+     </body>
+   </html>

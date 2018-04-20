@@ -224,7 +224,10 @@ h1{
     margin-left: 13em;
     grid-template-columns: 1fr 1fr 1fr;
   }
+  .h2{
 
+    margin-left: 2em;
+  }
 }
 @media screen and (max-width: 904px){
     .wrapper{
@@ -282,7 +285,7 @@ h1{
     display: inherit;
   }
   .dropdown-content {
-      min-width: 60em;
+      min-width: 45em;
       text-align: center;
   }
 }
@@ -291,7 +294,7 @@ h1{
     grid-template-columns: 1fr 1fr;
   }
   .dropdown-content{
-    min-width: 326px;
+    min-width: 42em;
   }
 }
 @media screen and (max-width: 656px) {
@@ -299,13 +302,39 @@ h1{
     min-width: 656px;
   }
 }
+@media screen and (max-width: 552px) {
+  .dropdown-content{
+    min-width: 35em;
+  }
+}
+@media screen and (max-width: 512px) {
+  .dropdown-content {
+      min-width: 32em;
+      text-align: center;
+  }
+}
 @media screen and (max-width: 480px) {
   .wrapper{
     grid-template-columns: 1fr;
   }
 }
+@media screen and (max-width: 448px) {
+  .dropdown-content{
+    min-width: 28em;
+  }
+}
+@media screen and (max-width: 352px) {
+  .dropdown-content{
+    min-width: 22em;
+  }
+}
 @media screen and (max-width: 340px){
   .wrapper{
     margin-left: 0;
+  }
+}
+@media screen and (max-width: 280px) {
+  .dropdown-content{
+    min-width: 18em;
   }
 }

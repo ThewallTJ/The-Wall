@@ -34,7 +34,7 @@ if (!isset($_SESSION['userid'])) {
     </div>
     <div class="header">
     <div class="dropdown">
-  <input type="image"  src="../media/menu4.png"  class="dropbtn"  onclick="Dropdown()"/>
+  <input type="image"  src="../media/menu4.png"  alt="dropdown" class="dropbtn"  onclick="Dropdown()"/>
  </div>
 </div>
 <div id="myDropdown" class="dropdown-content">
@@ -44,7 +44,7 @@ if (!isset($_SESSION['userid'])) {
 <br>
 
 <div class="dropdown">
-<h2 class="h2-right dropbtn1" onclick="Dropdown1()"><?php echo $_SESSION['username'];  ?></h2>
+<h2 class="h2-right dropbtn1" onclick="Dropdown1()">ree</h2>
 <div id="myDropdown1" class="dropdown-content1">
 <a href="uitlogpoort.php">sign out</a>
 <a href="#about">sign in</a>
@@ -62,7 +62,7 @@ if (!isset($_SESSION['userid'])) {
 <!-- The Modal -->
 <div id="myModal" class="modal">
   <span class="close">&times;</span>
-  <img class="modal-content" id="img01">
+  <img class="modal-content" id="img01" src="#" alt="modal content">
   <div id="caption"></div>
   <br>
   <div id="caption2"></div>
